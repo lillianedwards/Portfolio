@@ -1,84 +1,198 @@
 :root {
-    --main-bg-color:#eddedd;
+  --main-bg-color: #eddedd;
 }
 
-
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding:0;
-    font-size: 62.5%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
 }
 
 body {
-    font-family: Tenor Sans;
-    background-color: var(--main-bg-color);
-    margin: 3rem;
+  font-family: Tenor Sans;
+  background-color: var(--main-bg-color);
+  margin: 3rem;
 }
 
 header {
-    display: flex; 
-
+  display: flex;
 }
 
-h1{
-    width: 500px;
-    height:100px;
-    background-color:#ab807d;
-    border-radius:30px;
-    font-size: 4rem;
-    padding: 1rem;
-    color:#eddedd;
+h1 {
+  width: 500px;
+  height:100px;
+  background-color: #ab807d;
+  border-radius: 30px;
+  font-size: 4rem;
+  padding: 1rem;
+  color: #eddedd;
+  line-height: normal;
 }
 
 nav ul {
-    display:flex;
-    flex-direction:row;
-    justify-content:space-evenly;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 nav li {
-    margin: 3rem 4rem;
-    font-size: 2rem;
-    color: #ab807d;
-
-
+  margin: 3rem 4rem;
+  font-size: 2rem;
+  color: #ab807d;
 }
+
+nav li:hover {
+  font-size: 3.5rem;
+  text-shadow: 0px 4px 4px #d6aca7;
+}
+
 img {
-    display: block;
-    margin-left:auto;
-    margin-right: auto;
-    width: 50%;
-  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border: 10px double #e6bfb6;
+  border-radius: 30px;
 }
 
-section{
-    display:flex;
-    flex-wrap:wrap;
-
+section {
+  display: flex;
+  justify-content: space-between;
 }
 h2 {
-    font-size: 4rem;
-    text-align:right; 
-    color:#ab8c93;
-    line-height: normal;
+  font-size: 4rem;
+  text-align: right;
+  color: #ab8c93;
+  line-height: normal;
+  border-radius: 20px;
+}
+
+main {
+  display: flex;
+  flex-flow: column wrap;
+}
+main h2 {
+  display: flex;
+  align-content: flex-start;
+  line-height: normal;
+}
+
+article a {
+  font-size: 1.5rem;
+  font-family: Archivo Narrow;
+  color: black;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 5px double #e6bfb6;
+  border-radius: 20px;
+}
+
+article a:hover {
+  background-color: #e6bfb6;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  border: 5px double #e6bfb6;
+  border-radius: 20px;
+  margin-top: 3rem;
+  background-color: #ab807d;
+}
+
+h3 {
+  font-size: 4rem;
+  color: #eddedd;
+}
+
+footer li {
+  font-size: 2rem;
+  line-height: 3rem;
+  order: 3;
 }
 
 .clouds {
-height:10rem;
-width:100%; 
-margin-bottom: 1rem;
-background-image: url(./images/headerclouds.jpg);
-background-size: cover;
-background-position: center;
-font-size:6rem;
-line-height: 240%;
-text-align:right;
-color:#ab8c93;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
+  height: 10rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  background-image: url(./images/headerclouds.jpg);
+  background-size: cover;
+  background-position: center;
+  font-size: 6rem;
+  line-height: 240%;
+  text-align: right;
+  color: #ab8c93;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .about {
-
+  text-align: right;
 }
+
+.hello {
+  font-size: 1.25rem;
+  font-family: Archivo Narrow;
+  display: block;
+  padding: 1rem;
+  border: 1rem 1rem;
+  line-height: normal;
+}
+
+.headshot {
+  width: 200px;
+  height: 250px;
+}
+
+.work {
+  font-size: 4rem;
+  justify-content: flex-start;
+}
+
+.apps {
+  height: 200px;
+  width: 400px;
+}
+
+@media  screen and (max-width:1632px) {
+    h1 {
+        flex-shrink:2;
+    }
+}
+@media screen and (max-width: 992px) {
+  header,
+  main,
+  footer {
+    width: 50%;
+    flex-direction:column;
+    flex-wrap: wrap;
+  }
+  
+  }
+
+  @media screen and (max-width:768px) {
+    header,
+    main,
+    footer {
+        width:50%;
+        flex-direction:column;
+        flex-wrap:wrap;
+    }
+    nav ul {
+     flex-direction:column;  
+     font-size: 1rem
+
+    }
+
+    h1 {
+        flex-shrink: 2;
+
+    }
+
+    .clouds {
+        flex-shrink: 2;
+    }
+  }
+
+/* add smaller text size for h1 when viewport shrinks */
