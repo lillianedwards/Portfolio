@@ -12,7 +12,7 @@
 body {
   font-family: Tenor Sans;
   background-color: var(--main-bg-color);
-  margin: 3rem;
+  margin: 1rem;
 }
 
 header {
@@ -21,7 +21,7 @@ header {
 
 h1 {
   width: 500px;
-  height:100px;
+  height: 100px;
   background-color: #ab807d;
   border-radius: 30px;
   font-size: 4rem;
@@ -51,7 +51,7 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 65vw;
   border: 10px double #e6bfb6;
   border-radius: 30px;
 }
@@ -70,12 +70,18 @@ h2 {
 
 main {
   display: flex;
-  flex-flow: column wrap;
+  flex-direction:column; 
+  flex-wrap: wrap;
 }
 main h2 {
   display: flex;
   align-content: flex-start;
   line-height: normal;
+}
+
+div {
+  display: flex;
+
 }
 
 article a {
@@ -100,6 +106,7 @@ footer {
   border-radius: 20px;
   margin-top: 3rem;
   background-color: #ab807d;
+  width: 100%;
 }
 
 h3 {
@@ -155,44 +162,49 @@ footer li {
   width: 400px;
 }
 
-@media  screen and (max-width:1632px) {
-    h1 {
-        flex-shrink:2;
-    }
-}
 @media screen and (max-width: 992px) {
   header,
-  main,
-  footer {
+  main {
     width: 50%;
-    flex-direction:column;
+    flex-direction: column;
     flex-wrap: wrap;
   }
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer li {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header,
+  main {
+    width: 50%;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  nav ul {
+    flex-direction: column;
+    font-size: 1rem;
+  }
+
+  h1 {
+    flex-shrink: 2;
+  }
+
+  .clouds {
+    flex-shrink: 2;
+  }
+
+  section {
+    display: block;
+  }
+
   
-  }
-
-  @media screen and (max-width:768px) {
-    header,
-    main,
-    footer {
-        width:50%;
-        flex-direction:column;
-        flex-wrap:wrap;
-    }
-    nav ul {
-     flex-direction:column;  
-     font-size: 1rem
-
-    }
-
-    h1 {
-        flex-shrink: 2;
-
-    }
-
-    .clouds {
-        flex-shrink: 2;
-    }
-  }
+  
+}
 
 /* add smaller text size for h1 when viewport shrinks */
